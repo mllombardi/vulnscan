@@ -244,7 +244,6 @@ To reduce cost on large codebases, consider filtering to only scan files that ha
 
 ## Roadmap
 
-![Vulnscan roadmap](docs/roadmap.svg)
 
 | Version | Name | What it does |
 |---|---|---|

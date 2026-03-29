@@ -241,3 +241,19 @@ To reduce cost on large codebases, consider filtering to only scan files that ha
 - False positives are possible — always review findings before acting on them
 - Large files (>1,000 lines) may occasionally hit the `max_tokens` output cap; increase it in `analyzer.py` if needed
 - vulnscan is a static analysis aid, not a substitute for a full security audit
+
+## Roadmap
+
+![Vulnscan roadmap](docs/roadmap.svg)
+
+| Version | Name | What it does |
+|---|---|---|
+| **V1** | Pipeline scanner | Read files → Claude API → markdown report |
+| **V2** | Smarter pipeline | Bandit pre-filter, chunked processing, severity scoring, HTML report, multi-language |
+| **V3** | CI/CD integration | GitHub Action, PR comment annotations, badge, baseline diffs, fail-on-critical |
+| **V4** | Agentic scanner | Claude drives the loop via tool use — follows import chains, requests context autonomously |
+| **V5** | MCP server | Expose vulnscan as an MCP tool, plug directly into Claude Code and other agents |
+| **V6** | Platform | Web dashboard, trend tracking, SARIF export, AI-generated remediation PRs |
+
+> V4 is the architectural inflection point — below it, your Python script
+> orchestrates Claude. Above it, Claude orchestrates itself.
